@@ -1,4 +1,5 @@
 var counter = 1;
+
 function AddNote()
 {
     //vars
@@ -10,7 +11,7 @@ function AddNote()
     let header = document.createElement('div');
     let buttonDiv = document.createElement('div');
     let par_modal = document.getElementById('p-modal');
-    let close = document.getElementsByClassName('close');
+    modal = document.getElementById('myModal');
 
 
     //styles
@@ -43,20 +44,15 @@ function AddNote()
 
     noteContainer.appendChild(individualNotes);
     counter ++;
+
+    //open the modal
+    learnButton.onclick = function(){
+        modal.style.display ="block"
+    }
     
 
 }
-
-
-
-// function closeSpan(e){
-//     var modal = document.getElementsByClassName("modal")
-//     var item = e.target; 
-//     if(item.className[0] === "close")
-//     {
-//         modal.style.display="none";
-//     }
-//     console.log("works")
-    
-// }
-
+ //close modal
+function closeMod(){
+    modal.style.display ="none"
+}
